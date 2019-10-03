@@ -1,0 +1,8 @@
+.header-image {
+  background-image: url("../../assets/userAvatar.png");
+  background-size: cover;
+}
+
+img {
+  width: 50px;
+}

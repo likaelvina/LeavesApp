@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Refuse request</h1>
+<div mat-dialog-content>
+  <p>Write the reason for refusing the request:</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.reason" required />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.reason" cdkFocusInitial>
+    Ok
+  </button>
+</div>

@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "user@email.com",
+      "password": "user",
+      "role": "user",
+      "totalDaysOff": 5,
+      "usedDays": 1,
+      "remainingDays": 4
+    },
+    {
+      "id": 3,
+      "email": "manager@email.com",
+      "password": "manager",
+      "role": "manager",
+      "totalDaysOff": 5,
+      "usedDays": 0,
+      "remainingDays": 5
+    },
+    {
+      "id": 4,
+      "email": "humanresource@email.com",
+      "password": "humanresource",
+      "role": "human resource",
+      "totalDaysOff": 5,
+      "usedDays": 0,
+      "remainingDays": 5
+    }
+  ],
+  "usersVacations": [
+    {
+      "userid": 2,
+      "date": "10/17/2019",
+      "approved": true,
+      "reason": null,
+      "done": true,
+      "id": 1
+    },
+    {
+      "userid": 4,
+      "date": "10/9/2019",
+      "approved": false,
+      "reason": "Reason reason.",
+      "done": true,
+      "id": 2
+    }
+  ],
+  "deletedVacations": []
+}

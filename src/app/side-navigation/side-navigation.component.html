@@ -1,0 +1,47 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav-content class="content">
+    <b>
+      <a
+        [routerLink]="'/profile'"
+        [ngClass]="(currentLink==='profile')?'aktive':''"
+        (click)="setClass('profile')"
+      >
+        Profile
+      </a>
+    </b>
+    <br />
+    <br />
+    <b>
+      <a
+        [routerLink]="'/vacations'"
+        [ngClass]="(currentLink==='vacations')?'aktive':''"
+        (click)="setClass('vacations')">
+        Vacations
+      </a>
+    </b>
+
+    <br />
+    <br />
+    <b>
+      <a
+        [routerLink]="'/manageRequests'"
+        *ngIf="isManager"
+        [ngClass]="(currentLink==='manageRequests')?'aktive':''"
+        (click)="setClass('manageRequests')"
+        >Requests</a
+      >
+    </b>
+
+    <br />
+    <br />
+    <b>
+      <a
+        [routerLink]="'/users'"
+        *ngIf="isHR"
+        [ngClass]="(currentLink==='users')?'aktive':''"
+        (click)="setClass('users')"
+        >Users</a
+      >
+    </b>
+  </mat-sidenav-content>
+</mat-sidenav-container>

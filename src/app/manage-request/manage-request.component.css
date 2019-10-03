@@ -1,0 +1,17 @@
+table {
+  width: 700px;
+}
+
+.iconCheck {
+  color: rgb(51, 255, 95);
+}
+
+.iconCancel {
+  color: red;
+}
+
+.mat-column-nr,
+.mat-column-decline,
+.mat-column-accept{
+  max-width: 70px;
+}

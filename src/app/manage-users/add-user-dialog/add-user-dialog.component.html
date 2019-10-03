@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>Add user</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="data.email"
+      placeholder="Email"
+      type="email"
+      ngvemail
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="data.password"
+      type="password"
+      placeholder="Password"
+      required
+      [rangeLength]="[4, 9]"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select role</mat-label>
+    <mat-select [(value)]="data.role" required>
+      <mat-option value="user">User</mat-option>
+      <mat-option value="manager">Manager</mat-option>
+      <mat-option value="human resource">Human resource</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="data.totalDaysOff"
+      type="number"
+      placeholder="Vacation"
+      required
+    />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial >
+    Ok
+  </button>
+</div>

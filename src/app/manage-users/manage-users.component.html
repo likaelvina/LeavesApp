@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-2 offset-md-1">
+    <h2>Users</h2>
+    <br />
+  </div>
+</div>
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <mat-form-field>
+      <input
+        matInput
+        (keyup)="applyFilter($event.target.value)"
+        placeholder="Filter"
+      />
+    </mat-form-field>
+  </div>
+</div>
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <table mat-table [dataSource]="users">
+      <ng-container matColumnDef="nr">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{ user.position }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="employee">
+        <mat-header-cell *matHeaderCellDef> Employee </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{ user.email }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <mat-header-cell *matHeaderCellDef> Role </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{ user.role }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef> Delete user </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <button mat-raised-button color="warn" (click)="deleteUser(user.id)">
+            Delete
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </table>
+    <br />
+    <button mat-raised-button color="primary" (click)="openDialog()">
+      Add user
+    </button>
+  </div>
+</div>
